@@ -1,7 +1,7 @@
 const routes=require('express').Router();
 const userControllers=require('../controllers/users');
 
-routes.get('/',userControllers.getAll);
-routes.get('/:id',userControllers.getSingle);
+routes.get('/contacts',userControllers.getAll);
+routes.get('/contacts/:id',userControllers.getSingle);
 
 module.exports=routes;
