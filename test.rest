@@ -1,0 +1,31 @@
+### Get all contacts
+GET http://localhost:8080/contacts
+Content-Type: application/json
+
+### Get a single contact by ID
+GET http://localhost:8080/contacts/67cce27cb887479c921861c0
+Content-Type: application/json
+
+### Create a new contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "123456789"
+}
+
+### Update a contact
+PUT http://localhost:8080/contacts/67cce27cb887479c921861c0
+Content-Type: application/json
+
+{
+    "name": "John Doe Updated",
+    "email": "john.updated@example.com",
+    "phone": "987654321"
+}
+
+### Delete a contact
+DELETE http://localhost:8080/contacts/67cce27cb887479c921861c0
+Content-Type: application/json

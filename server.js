@@ -1,14 +1,14 @@
 const express=require('express');
 const app=express();
+const bodyParser=require('body-parser');
 const mongoConn=require('./db/dbconnetion');
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
-  })
+  });
+app.use(bodyParser.json());
 app.use('/',require('./routes'));
-
-
 
 
 mongoConn.initDB((err)=>{
